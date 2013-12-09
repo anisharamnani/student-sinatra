@@ -3,11 +3,11 @@ require 'sinatra/base'
 # Why is it a good idea to wrap our App class in a module?
 module StudentSite
   class App < Sinatra::Base
+    get '/' do 
+      puts "hello world!"
+    end 
     get '/hello-world' do
-    	 @random_numbers = [
-      	1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-      	11, 12, 13, 14, 15, 16, 17, 18, 19, 20
-      	]
+    	 @random_numbers = (1..20).to_a.shuffle
       erb :hello
     end
 
