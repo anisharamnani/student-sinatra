@@ -1,7 +1,13 @@
-"Hello World"
+<p> Hello Wolrd! </p>
 
 <ul> 
 	<% @random_numbers.each do |number| %>
-			<li> <%= number %> </li>
+			<li> 
+				<%= number %> 
+			</li>
   <% end %>
- </ul>
+</ul>
+
+
+<h1> <%= @thing.name %> </h1>
+<h1> <%= @thing.num %> </h1>
